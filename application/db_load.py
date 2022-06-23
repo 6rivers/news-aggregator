@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from application import db
-from appliction import cred
-from appliction.models import News
+from application import cred
+from application.models import News
 import re
 
 apiKey = cred.apiKey
