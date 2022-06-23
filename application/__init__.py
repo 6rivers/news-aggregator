@@ -34,4 +34,4 @@ if not app.debug:
     app.logger.info('News Aggregator')
 
 
-from application import routes, models
+from application import routes, models, errors
