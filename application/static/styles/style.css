@@ -1,0 +1,299 @@
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+	background: #fff;
+	color: #000;
+	font-size: 15px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #010101;
+	text-decoration: none;
+}
+
+/* Utilities  */
+
+/* Menu button which remains invisible untill the screen size is 700px or less */
+
+.menu-btn {
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	z-index: 2;
+	display: none;
+}
+
+
+.btn {
+	display: inline-block;
+	border: 0;
+	padding: 10px 20px;
+	background: #262626;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.dark {
+	color: #fff;
+}
+
+.dark .btn {
+	color: #333;
+	background: #f4f4f4;
+}
+
+/**/
+
+#container {
+	width: 90%;
+	max-width: 900px;
+	margin: auto;
+}
+
+#main-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
+#main-nav .logo {
+	width: 110px;
+
+}
+
+#main-nav ul {
+	display: flex;
+	flex-direction: row;
+}
+
+#main-nav ul li {
+	padding: 0px 10px;
+}
+
+#main-nav ul a {
+	padding-bottom: 2px;
+}
+
+#main-nav ul li a:hover {
+	border-bottom: 2px solid #262626;
+}
+
+#main-nav .main-menu {
+	flex: 1; /* A number specifying how much the item will grow relative to the rest of the flexible items. Default value is 0 */
+	margin-left: 20px;
+}
+
+
+/* home-cards */ 
+
+.home-cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+	/* margin-top: 20px;
+	margin-bottom: 20px; */
+}
+
+.card {
+	border-radius: 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.home-cards img {
+	height: 160px;
+	width: 100%;
+	object-fit: cover;
+	/* border: #000 solid 1px; */
+	/* margin-bottom: 5px; */
+}
+
+.home-cards .card-text {
+	display: flex;
+	flex-direction: column;
+	min-height: 150px;
+	margin: 15px;
+	/* padding: 15px; */
+}
+
+.home-cards a {
+	display: inline-block;
+	text-transform: capitalize;
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+
+
+.home-cards p {
+	font-size: 15px;
+	font-weight: 700;
+	color: #ccc;
+	justify-self: flex-end;
+	margin-top: auto;
+}
+
+
+
+
+/* Social */
+
+#social {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 30px 0 30px;
+}
+
+#social img {
+	margin-left: 10px;
+}
+
+/* Links */
+
+
+#links {
+	background-color: #f2f2f2;
+	color: #616161;
+	padding: 30px 0;
+}
+
+#links .inner-links {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 10px;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+#links .inner-links li {
+	line-height: 2.8;
+}
+
+
+/* Footer */
+
+#footer {
+	background-color: #f2f2f2;
+	color: #616161;
+	padding: 20px 0;
+}
+
+#footer .inner-footer {
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	padding: 0 20px 0 20px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#footer .inner-footer div {
+	display: flex;
+	margin-bottom: 20px;
+
+}
+
+#footer .inner-footer div i{
+	margin-right: 20px;
+}
+
+#footer .inner-footer ul {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+#footer .inner-footer li {
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+
+
+/* Screens 700px and below */
+
+@media(max-width: 700px) {
+	.menu-btn {
+		display: block;
+	}
+
+	.menu-btn:hover {
+		opacity: 0.7;
+	}
+
+	#main-nav .main-menu {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #f2f2f2;
+		opacity: 1.0;
+		border-right: 1px solid #ccc;
+		width: 50%;
+		height: 100%;
+		transform: translateX(-500px); /*This property makes the button icon to disapper from 700px screen*/
+		transition: transform 0.5s ease-in-out;
+		padding: 30px;
+	}
+
+	#main-nav .main-menu.show {
+		transform: translateX(-20px); /*This property makes the button icon to appear but need to
+		include "show" class which is added dynamically to main-menu class by js script when clicked */
+	}
+
+	#main-nav .main-menu li{
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	#main-nav .main-menu li:last-child {
+		border-bottom: none;
+	}
+
+	#main-nav .right-menu {
+		margin-right: 50px;
+	}
+
+	.home-cards {
+		grid-template-columns: repeat(2, 1fr);
+		width: 80%;
+		margin: auto;
+	}
+
+	.home-cards img{
+		/* height: 120px; */
+		object-fit:fill;
+	}
+
+}
+
+/* screen size 500px or less */
+@media(max-width: 500px) {
+	.home-cards {
+		grid-template-columns: 1fr;
+	}
+
+}

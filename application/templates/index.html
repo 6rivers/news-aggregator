@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block app_content %}
+
+		<!-- Home cards 1 -->
+		<section class="home-cards">
+			{% for n in news %}
+			<div class="card">
+				<img src="{{ n.image_url }}">
+				<div class="card-text">
+					<a href="{{ n.url }}" target="_blank" class="news-title">{{ n.title }}</a>
+					<p>{{ n.pub_date }}</p>
+				</div>
+			</div>
+			{% endfor %}			
+		</section>
+
+{% endblock %}
