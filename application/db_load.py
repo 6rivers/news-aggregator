@@ -57,6 +57,7 @@ def news_loader1(url, category, count, source):
                     img_url = i.coverImages.text
             # to clean up dates and time format
             pub_date = i.pubDate.text
+            # to remove whatever comes after '\dT' 2022-06-24T19:11:16+05:30
             TimeRegex = re.compile(r'\dT')
             mo = TimeRegex.findall(pub_date)
             if mo:
