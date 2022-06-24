@@ -5,8 +5,9 @@
 		<section class="home-cards">
 			{% for n in news %}
 			<div class="card">
-				<img src="{{ n.image_url }}">
+				<img src="{{ n.image_url }}" class="news-img">
 				<div class="card-text">
+					<img src="{{ n.news_source.image_url }}" alt="{{ n.news_source.name }}" class="news-source">
 					<a href="{{ n.url }}" target="_blank" class="news-title">{{ n.title }}</a>
 					<p>{{ n.pub_date }}</p>
 				</div>

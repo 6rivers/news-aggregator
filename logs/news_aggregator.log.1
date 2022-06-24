@@ -1,64 +1,4 @@
-2022-06-22 13:11:28,993 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
-2022-06-22 13:21:47,889 ERROR: Exception on / [GET] [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py:1455]
-Traceback (most recent call last):
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\routes.py", line 11, in index
-    return render_template('index.html', news=news)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\templating.py", line 148, in render_template
-    return _render(
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\templates\index.html", line 21, in top-level template code
-    <li><a href="{{ url_for('news', category='India') }}">India</a></li>
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\helpers.py", line 336, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
-    rv = url_adapter.build(
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\werkzeug\routing.py", line 2305, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'news' with values ['category']. Did you mean 'index' instead?
-2022-06-22 13:23:35,333 ERROR: Exception on / [GET] [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py:1455]
-Traceback (most recent call last):
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\routes.py", line 11, in index
-    return render_template('index.html', news=news)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\templating.py", line 148, in render_template
-    return _render(
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\jinja2\environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\templates\index.html", line 21, in top-level template code
-    <li><a href="{{ url_for('news', category='India') }}">India</a></li>
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\helpers.py", line 336, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\helpers.py", line 323, in url_for
-    rv = url_adapter.build(
-  File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\werkzeug\routing.py", line 2305, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'news' with values ['category']. Did you mean 'index' instead?
-2022-06-22 13:24:27,509 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
-2022-06-22 13:24:57,954 ERROR: Exception on /news/India [GET] [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py:1455]
+2022-06-22 13:25:27,628 ERROR: Exception on /news/India [GET] [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py:1455]
 Traceback (most recent call last):
   File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
     response = self.full_dispatch_request()
@@ -85,3 +25,61 @@ Traceback (most recent call last):
   File "C:\Users\ranganath\Desktop\001 Profession\news aggregator\venv\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: news.html
+2022-06-22 13:26:05,909 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:27:27,154 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:27:55,194 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:27:56,215 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:30:28,248 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:31:25,445 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:31:26,431 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:35:12,933 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:35:13,893 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:42:52,561 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:42:53,538 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:43:55,417 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 13:43:59,680 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 15:01:51,923 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 15:05:57,726 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 15:06:04,098 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 15:06:05,329 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 16:53:16,309 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 16:53:20,638 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 16:53:41,418 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:48:28,978 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:51:44,463 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:51:45,432 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:52:48,823 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:52:50,115 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:55:17,403 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:55:23,743 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 17:55:56,308 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 18:00:42,141 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 18:05:02,741 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 18:07:31,076 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-22 18:07:32,048 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-23 14:36:20,997 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-23 14:44:06,092 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-23 14:44:07,076 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:33]
+2022-06-23 18:02:56,301 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:34]
+2022-06-23 18:02:57,379 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news aggregator\app\__init__.py:34]
+2022-06-23 20:01:32,800 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:01:51,369 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:02:17,000 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:02:52,403 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:04:33,846 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:22:21,103 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:47:55,456 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:53:13,299 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 20:53:36,561 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 21:21:22,841 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-23 21:24:45,887 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 16:03:26,314 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 16:49:04,948 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 16:49:31,363 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 16:49:48,936 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 16:50:14,643 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 17:32:19,298 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 17:53:14,274 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 17:59:02,064 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 18:06:24,948 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
+2022-06-24 18:20:00,422 INFO: News Aggregator [in C:\Users\ranganath\Desktop\001 Profession\news-aggregator\application\__init__.py:34]
