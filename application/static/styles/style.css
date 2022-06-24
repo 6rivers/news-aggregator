@@ -301,6 +301,9 @@ a {
 		object-fit:fill;
 	}
 
+	.home-cards .news-source {
+		height: 20px;
+
 }
 
 /* screen size 500px or less */
