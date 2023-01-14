@@ -27,7 +27,8 @@ apiKey = cred.apiKey
 # news_loader1('https://www.yahoo.com/news/rss', 'world', 10, 'Yahoo News')
 # news_loader1('https://telugu.hindustantimes.com/rss/andhra-pradesh', 'andhra pradesh', 10, 'HindustanTimes Telugu')
 # news_loader1('https://telugu.hindustantimes.com/rss/telangana', 'telangana', 10, 'HindustanTimes Telugu')
-# news_loader1('https://www.news18.com/rss/india.xml', 'india', 5, 'News18')
+# news_loader1('https://www.news18.com/rss/india.xml', 'india', 10, 'News18')
+# No images from IndianExpress
 # news_loader1('https://www.newindianexpress.com/Nation/rssfeed/?id=170&getXmlFeed=true', 'india', 5, 'NewIndianExpress')
 # news_loader1('https://www.espncricinfo.com/rss/content/story/feeds/0.xml', 'sports', 5, 'ESPNCricinfo')
 # news_loader2('https://newsapi.org/v2/top-headlines', 'cricbuzz', 5, 'Cricbuzz')
@@ -50,11 +51,14 @@ def news_loader1(url, category, count, source):
             try:
                 img = i.find('media:content')
                 img_url = img['url']
-            except TypeError:
+            except:
                 try:
                     img_url = i.image.text
                 except:
-                    img_url = i.coverImages.text
+                    try:
+                        img_url = i.coverImages.text
+                    except:
+                        pass
             # to clean up dates and time format
             pub_date = i.pubDate.text
             # to remove whatever comes after '\dT' 2022-06-24T19:11:16+05:30
